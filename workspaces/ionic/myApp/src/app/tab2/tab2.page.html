@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Depoimentos
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item>
+      <ion-input clear-input type="text" placeholder="Assunto" [(ngModel)]="depoimentos.assunto"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input clear-input type="text" placeholder="Colegio" [(ngModel)]="depoimentos.colegio"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-input clear-input type="text" placeholder="Depoimento" [(ngModel)]="depoimentos.depoimento"></ion-input>
+    </ion-item>
+
+    <div padding>
+      <ion-button expand="block" (click)="save(depoimentos)" [disabled]="!depoimentos.depoimento || !depoimentos.assunto || !depoimentos.colegio">Enviar</ion-button>
+
+    </div>
+
+
+    
+
+</ion-list>
+
+
+</ion-content>
+
+
+

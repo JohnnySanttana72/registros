@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Feed
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+
+<ion-content padding>
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
+  
+  <ion-card *ngFor = "let postagens of postagensDB">
+  <img src="{{postagens.imagem}}" alt="Imagem da postagem">
+    <ion-card-content>
+      <ion-card-title  >
+        {{postagens.titulo}}
+      </ion-card-title>
+      <br>
+      <p>
+        {{postagens.texto}}
+      </p>
+    </ion-card-content>
+  </ion-card>
+      
+       
+</ion-content>
+
+
